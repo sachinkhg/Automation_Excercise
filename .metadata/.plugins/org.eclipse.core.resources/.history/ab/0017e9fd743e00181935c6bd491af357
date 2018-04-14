@@ -1,0 +1,29 @@
+import static org.testng.Assert.assertEquals;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class ExcerciseOne {
+	String base_url = "https://www.amazon.in";
+	CommonClass common_class = new CommonClass();
+	@Test(priority = 1)
+	public void LogoValidation() throws InterruptedException {
+		common_class.OpenBrowser(base_url);
+		Thread.sleep(3000);
+		common_class.ClickAttribute("xpath", "//*[@id=\"nav-logo\"]/a[1]/span[1]");
+		String page_title = common_class.GetTitle();
+		
+		Assert.assertEquals(page_title, 
+				"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+	}
+	
+	@Test(priority = 2)
+	public void PrimePageValidation() throws InterruptedException {
+		common_class.ClickAttribute("partialLinkText", "Try Prime");
+		String page_title = common_class.GetTitle();
+		
+		Assert.assertEquals(page_title, 
+				"Amazon.in: Amazon Prime");
+	}	
+}
+	
