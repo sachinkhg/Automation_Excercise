@@ -72,7 +72,13 @@ public class CommonClass {
 			case("tagName"): driver.findElement(By.tagName(locator_value)).clear();break;
 			case("xpath"): driver.findElement(By.xpath(locator_value)).clear();break;
 			case("name"): driver.findElement(By.name(locator_value)).clear();break;
-			case("id"): driver.findElement(By.id(locator_value)).clear();break;			
+			case("id"): driver.findElement(By.id(locator_value)).clear();break;
+			
+			
+			
+			
+			
+			
 		}
 	}	
 }

@@ -65,14 +65,14 @@ public class CommonClass {
 	//To Clear Text from Textbox
 	public void clearTextFromTexBox(String locator_name, String locator_value) {
 		switch(locator_name){
-			case("partialLinkText"): driver.findElement(By.partialLinkText(locator_value)).clear();break;
+			case("id"): driver.findElement(By.id(locator_value)).clear();break;
+			case("name"): driver.findElement(By.name(locator_value)).clear();break;
+			case("xpath"): driver.findElement(By.xpath(locator_value)).clear();break;
 			case("cssSelector"): driver.findElement(By.cssSelector(locator_value)).clear();break;
 			case("className"): driver.findElement(By.className(locator_value)).clear();break;
 			case("linkText"): driver.findElement(By.linkText(locator_value)).clear();break;
+			case("partialLinkText"): driver.findElement(By.partialLinkText(locator_value)).clear();break;
 			case("tagName"): driver.findElement(By.tagName(locator_value)).clear();break;
-			case("xpath"): driver.findElement(By.xpath(locator_value)).clear();break;
-			case("name"): driver.findElement(By.name(locator_value)).clear();break;
-			case("id"): driver.findElement(By.id(locator_value)).clear();break;			
 		}
 	}	
 }
