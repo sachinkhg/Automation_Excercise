@@ -1,0 +1,36 @@
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+ 
+public class mouseHover{
+ 
+	public static WebDriver driver;
+ 
+	public static void main(String[] args) throws InterruptedException {
+
+        String baseUrl = "https://www.amazon.in/";
+        		WebDriver driver = new FirefoxDriver();
+        		CommonClass common_class = new CommonClass();
+
+                driver.get(baseUrl);           
+                Thread.sleep(3000);
+               // common_class.clickAttribute("xpath", "/html/body/div[2]/div/div/button");
+                
+                WebElement link_Home = driver.findElement(By.xpath("//*[@id=\"nav-link-shopall\"]/span[2]"));
+                WebElement td_Home = driver
+                        .findElement(By
+                        		.xpath("//*[@id=\"nav-flyout-shopAll\"]/div[2]/a/span"));    
+                 
+                Actions builder = new Actions(driver);
+                 
+                builder.moveToElement(link_Home);
+                builder.moveToElement(td_Home);
+                builder.click().build().perform();
+                
+                //driver.close();
+ 
+        }
+ 
+}

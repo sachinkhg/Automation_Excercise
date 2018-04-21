@@ -1,0 +1,49 @@
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+ 
+public class mouseHover{
+ 
+	public static WebDriver driver;
+ 
+	public static void main(String[] args) throws InterruptedException {
+
+		   WebDriver driver = new FirefoxDriver();
+// -----------------Myntra Hover-------------------------------------------
+//		   driver.get("http://www.myntra.com/");
+//		   Actions a1 = new Actions(driver);
+//		   a1.moveToElement(driver.findElement
+//				   (By.xpath("//a[@href='/shop/men']"))).build().perform();
+//		   Thread.sleep(3000);
+//		   driver.findElement
+//		     (By.xpath("//a[@href='/men-bags-backpacks']")).click();
+// -----------------Myntra Hover-------------------------------------------
+// -----------------Amazon Hover-------------------------------------------
+//		   driver.get("http://www.amazon.in/");
+//		   Actions a1 = new Actions(driver);
+//		   a1.moveToElement(driver.findElement
+//				   (By.xpath("//*[@id=\"nav-link-yourAccount\"]/span[2]"))).build().perform();
+//		   Thread.sleep(1000);
+//		   
+//		   driver.findElement(By.xpath("//*[@id=\"nav-flyout-ya-signin\"]/a/span")).click();
+// -----------------Amazon Hover-------------------------------------------
+		   driver.get("http://www.amazon.in/");
+		   Actions a1 = new Actions(driver);
+		   a1.moveToElement(driver.findElement
+				   (By.xpath("//*[@id=\"nav-link-shopall\"]/span[2]"))).build().perform();
+		   Thread.sleep(1000);
+
+		   WebElement submenu = driver.findElement
+				   (By.xpath("//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[1]/span"));
+		   WebDriverWait wait = new WebDriverWait(driver,20);
+		   wait.until(ExpectedConditions.visibilityOf(submenu));
+		   a1.moveToElement(submenu).build().perform();
+		   Thread.sleep(1000);
+		   
+		   driver.findElement(By.xpath("//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[1]/div[1]/div/a[1]/span[1]")).click();
+		   }
+        }

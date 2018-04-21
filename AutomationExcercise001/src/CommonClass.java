@@ -74,5 +74,10 @@ public class CommonClass {
 			case("name"): driver.findElement(By.name(locator_value)).clear();break;
 			case("id"): driver.findElement(By.id(locator_value)).clear();break;			
 		}
-	}	
+	}
+	
+	public void mouseHoverAndClick() {
+		
+		
+	}
 }
