@@ -105,7 +105,7 @@ public class CommonClass {
 			case("xpath"): child_element = driver.findElement(By.xpath(child_locator_value));break;
 			case("name"): child_element = driver.findElement(By.name(child_locator_value));break;
 			case("id"): child_element = driver.findElement(By.id(child_locator_value));break;			
-		}
+	}
 		action.moveToElement(parent_element).build().perform();
 		 wait = new WebDriverWait(driver,20);
 		 wait.until(ExpectedConditions.visibilityOf(child_element));
@@ -152,10 +152,12 @@ public class CommonClass {
 			case("xpath"): child_element = driver.findElement(By.xpath(child_locator_value));break;
 			case("name"): child_element = driver.findElement(By.name(child_locator_value));break;
 			case("id"): child_element = driver.findElement(By.id(child_locator_value));break;			
-		}
+	}
 		wait.until(ExpectedConditions.visibilityOf(child_element));
 		child_element.click();
 
+		
 	}
+
 	
 }
