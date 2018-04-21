@@ -108,57 +108,9 @@ public class CommonClass {
 	}
 		action.moveToElement(parent_element).build().perform();
 		 wait = new WebDriverWait(driver,20);
-		 wait.until(ExpectedConditions.visibilityOf(child_element));
-		 child_element.click();
-	}
-	
-	public void doubleMouseHoverAndClick(String parent_locator_used, String parent_locator_value
-			, String sub_parent_locator_used, String sub_parent_locator_value
-			, String child_locator_used, String child_locator_value) {
-		action = new Actions(driver);
-		WebElement parent_element = null;
-		WebElement child_element = null;
-		WebElement sub_parent_element = null;
-		switch(parent_locator_used) {
-			case("partialLinkText"): parent_element = driver.findElement(By.partialLinkText(parent_locator_value));break;
-			case("cssSelector"): parent_element = driver.findElement(By.cssSelector(parent_locator_value));break;
-			case("className"): parent_element = driver.findElement(By.className(parent_locator_value));break;
-			case("linkText"): parent_element = driver.findElement(By.linkText(parent_locator_value));break;
-			case("tagName"): parent_element = driver.findElement(By.tagName(parent_locator_value));break;
-			case("xpath"): parent_element = driver.findElement(By.xpath(parent_locator_value));break;
-			case("name"): parent_element = driver.findElement(By.name(parent_locator_value));break;
-			case("id"): parent_element = driver.findElement(By.id(parent_locator_value));break;			
-		}
-		switch(sub_parent_locator_used) {
-			case("partialLinkText"): sub_parent_element = driver.findElement(By.partialLinkText(sub_parent_locator_value));break;
-			case("cssSelector"): sub_parent_element = driver.findElement(By.cssSelector(sub_parent_locator_value));break;
-			case("className"): sub_parent_element = driver.findElement(By.className(sub_parent_locator_value));break;
-			case("linkText"): sub_parent_element = driver.findElement(By.linkText(sub_parent_locator_value));break;
-			case("tagName"): sub_parent_element = driver.findElement(By.tagName(sub_parent_locator_value));break;
-			case("xpath"): sub_parent_element = driver.findElement(By.xpath(sub_parent_locator_value));break;
-			case("name"): sub_parent_element = driver.findElement(By.name(sub_parent_locator_value));break;
-			case("id"): sub_parent_element = driver.findElement(By.id(sub_parent_locator_value));break;			
-		}
-
-		switch(child_locator_used) {
-			case("partialLinkText"): child_element = driver.findElement(By.partialLinkText(child_locator_value));break;
-			case("cssSelector"): child_element = driver.findElement(By.cssSelector(child_locator_value));break;
-			case("className"): child_element = driver.findElement(By.className(child_locator_value));break;
-			case("linkText"): child_element = driver.findElement(By.linkText(child_locator_value));break;
-			case("tagName"): child_element = driver.findElement(By.tagName(child_locator_value));break;
-			case("xpath"): child_element = driver.findElement(By.xpath(child_locator_value));break;
-			case("name"): child_element = driver.findElement(By.name(child_locator_value));break;
-			case("id"): child_element = driver.findElement(By.id(child_locator_value));break;			
-		}
-		action.moveToElement(parent_element).build().perform();
-		wait = new WebDriverWait(driver,20);
-		wait.until(ExpectedConditions.visibilityOf(sub_parent_element));
-		action.moveToElement(sub_parent_element).build().perform();
-		wait.until(ExpectedConditions.visibilityOf(child_element));
-		child_element.click();
-
+		   wait.until(ExpectedConditions.visibilityOf(child_element));
+		   action.moveToElement(child_element).build().perform();
+		
 		
 	}
-
-	
 }

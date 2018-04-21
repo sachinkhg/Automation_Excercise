@@ -32,11 +32,8 @@ public class mouseHover{
 //		   
 //		   driver.findElement(By.xpath("//*[@id=\"nav-flyout-ya-signin\"]/a/span")).click();
 // -----------------Amazon Hover-------------------------------------------
-		   common_class.openBrowser("https://www.amazon.in/");
-//		   common_class.mouseHoverAndClick("xpath", "//*[@id=\"nav-link-yourAccount\"]/span[2]", "xpath", "//*[@id=\"nav-flyout-ya-signin\"]/a/span");
-		   common_class.doubleMouseHoverAndClick("xpath", "//*[@id=\"nav-link-shopall\"]/span[2]"
-				   , "xpath", "//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[1]/span"
-				   , "xpath", "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[1]/div[1]/div/a[1]/span[1]");
+		   common_class.openBrowser("https://www.amazon.com/");
+		   common_class.mouseHoverAndClick("xpath", "//*[@id=\"nav-link-yourAccount\"]/span[2]", "xpath", "//*[@id=\"nav-flyout-ya-signin\"]/a/span");
 //			driver.get("http://www.amazon.in/");
 //		   Actions a1 = new Actions(driver);
 //		   a1.moveToElement(driver.findElement
