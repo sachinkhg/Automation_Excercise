@@ -1,17 +1,18 @@
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
  
 public class mouseHover{
  
 	public static WebDriver driver;
  
 	public static void main(String[] args) throws InterruptedException {
-		CommonClass common_class = new CommonClass();
+		CommonClassMethods common_class = new CommonClassMethods();
 
 		  // WebDriver driver = new FirefoxDriver();
 // -----------------Myntra Hover-------------------------------------------
@@ -32,11 +33,20 @@ public class mouseHover{
 //		   
 //		   driver.findElement(By.xpath("//*[@id=\"nav-flyout-ya-signin\"]/a/span")).click();
 // -----------------Amazon Hover-------------------------------------------
+
+//----------------MouseHover Check-----------------------------------------------------------------	
 		   common_class.openBrowser("https://www.amazon.in/");
-//		   common_class.mouseHoverAndClick("xpath", "//*[@id=\"nav-link-yourAccount\"]/span[2]", "xpath", "//*[@id=\"nav-flyout-ya-signin\"]/a/span");
-		   common_class.doubleMouseHoverAndClick("xpath", "//*[@id=\"nav-link-shopall\"]/span[2]"
-				   , "xpath", "//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[1]/span"
-				   , "xpath", "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[1]/div[1]/div/a[1]/span[1]");
+//		   common_class.mouseHoverAndClick("xpath", "//*[@id=\"nav-link-yourAccount\"]/span[2]"
+//		   , "xpath", "//*[@id=\"nav-flyout-ya-signin\"]/a/span");
+//---------------------------------------------------------------------------------------------------------
+		   
+//----------------doubleMouseHover Check-----------------------------------------------------------------
+//		   common_class.openBrowser("https://www.amazon.in/");
+//		   common_class.doubleMouseHoverAndClick("xpath", "//*[@id=\"nav-link-shopall\"]/span[2]"
+//				   , "xpath", "//*[@id=\"nav-flyout-shopAll\"]/div[2]/span[1]/span"
+//				   , "xpath", "//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[1]/div[1]/div/a[1]/span[1]");
+//---------------------------------------------------------------------------------------------------------
+
 //			driver.get("http://www.amazon.in/");
 //		   Actions a1 = new Actions(driver);
 //		   a1.moveToElement(driver.findElement
@@ -52,6 +62,12 @@ public class mouseHover{
 //		   submenu = driver.findElement(By.xpath("//*[@id=\"nav-flyout-shopAll\"]/div[3]/div[1]/div[1]/div/a[1]/span[1]"));
 //		   wait.until(ExpectedConditions.visibilityOf(submenu));
 //		   submenu.click();
-//-------------------------------------------------------------------------------------------------------------------------------		   
+//-------------------------------------------------------------------------------------------------------------------------------	
+		  // driver.get("http://www.amazon.in/");
+		  // driver.findElement(By.linkText("Sell on Amazon")).sendKeys(Keys.ARROW_DOWN);
+		  // driver.findElement(By.linkText("Sell on Amazon")).click();
+		   common_class.clickAttribute("linkText", "Sell on Amazon");
+		   common_class.takeScreenShot();
+		
 		   }
         }

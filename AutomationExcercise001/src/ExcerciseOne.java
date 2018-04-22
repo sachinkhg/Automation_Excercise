@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 public class ExcerciseOne{
 	
 	String base_url = "https://www.amazon.in/";
-	CommonClass common_class = new CommonClass();
+	CommonClassMethods common_class = new CommonClassMethods();
 	
 	@Test
 	public void primePageValidation() {

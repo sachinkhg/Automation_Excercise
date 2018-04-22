@@ -6,11 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/eclipse-workspace/AutomationExcercise001/selenium-java-3.11.0/client-combined-3.11.0.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="D:/eclipse-workspace/AutomationExcercise001/selenium-java-3.11.0/libs/byte-buddy-1.7.9.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
@@ -57,6 +52,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="D:/eclipse-workspace/AutomationExcercise001/selenium-java-3.11.0/libs/okio-1.13.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="D:/eclipse-workspace/AutomationExcercise001/selenium-java-3.11.0/client-combined-3.11.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 		</attributes>
